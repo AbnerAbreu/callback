@@ -34,10 +34,10 @@
 // }
 // adicionarComidas(imprimirComidas)
 
-let diaSemana = "sextou";
+let diaSemana = prompt("escolha o dia da semana");
 
 let callback = (resolve,reject) =>{
-     if(diaSemana == "sextou"){
+     if(diaSemana === "sextou"){
          resolve("acertou");
         }
      else{
@@ -48,5 +48,5 @@ let callback = (resolve,reject) =>{
 let promessa = new Promise(callback);
 
 promessa
-    .then(alert("acertou"))
+    .then(console.log)
     .catch(console.error)
